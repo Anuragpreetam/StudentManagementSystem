@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>ID</label>
+                        <input type="text" id="ID" name="ID" /></br>
+                    </div>
+                    <div>
+                        <label>Student Name</label>
+                        <input type="text" name="name" id="sname">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="email" id="email" >
+                    </div>
+                    <div>
+                        <label>Class</label>
+                        <input type="text" name="class" id="clas">
+                    </div>
+                    <div>
+                        <label>Enrollment Year</label>
+                        <input type="number" min="2000" max="2030" step="1"  id="year" name="EnrollmentYear" /></br>
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div>
+                        <label>Country</label>
+                        <input type="text" name="city" id="country">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                        <input type="button" value="Clear" onclick="event.preventDefault();resetForm();">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="studentList">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                            <th>Class</th>
+                            <th>Year</th>
+                            <th>City</th>
+                            <th>Country</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
